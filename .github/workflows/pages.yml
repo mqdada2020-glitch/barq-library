@@ -1,4 +1,4 @@
-name: نشر مكتبة برق
+name: Deploy Barq Library
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: توليد الفهرس وفحص الملفات
+      - name: Build Index and Check Files
         run: python tools/build_index.py --out _site
       - uses: actions/upload-pages-artifact@v3
         with:
